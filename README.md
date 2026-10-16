@@ -1,9 +1,5 @@
 # MySchool — مدرسه من
 
-Cumulative WordPress plugin. Version 0.1.1 includes W00.01 and W00.02.
+Version 0.1.2 cumulative: W00.01 bootstrap, autoloader and module registry; W00.02 installer and nine base tables; W00.03 five school roles and 32 permissions.
 
-WordPress 6.4+, PHP 8.0+.
-
-Includes WordPress bootstrap, autoloader, module registry, admin dashboard and nine core database tables. Schema migration state: `myschool_db_version`.
-
-Activation and upgrades preserve existing data. Future works add management interfaces, access roles and other school features.
+Requirements: WordPress 6.4+, PHP 8.0+. All installations and upgrades preserve existing data. Individual student/class access checks are required in future modules.
