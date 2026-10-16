@@ -11,6 +11,7 @@ final class Plugin {
  public function boot(): void {
    if ($this->booted) return;
    $this->booted=true;
+   add_action('admin_init',array(\MySchool\Core\Installer::class,'maybeUpgrade'));
    load_plugin_textdomain('myschool',false,dirname(plugin_basename(MYSCHOOL_FILE)).'/languages');
    $this->registry->add(new AdminModule());
    $this->registry->boot();
