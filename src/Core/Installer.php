@@ -2,7 +2,7 @@
 namespace MySchool\Core;
 if (!defined('ABSPATH')) { exit; }
 final class Installer {
- public const DB_VERSION='3';
+ public const DB_VERSION='4';
  public const VERSION_OPTION='myschool_db_version';
  public static function maybeUpgrade():void {
   if(!current_user_can('manage_options')) return;

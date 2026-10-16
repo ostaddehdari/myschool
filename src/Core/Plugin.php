@@ -5,6 +5,7 @@ use MySchool\Modules\Api\ApiModule;
 use MySchool\Modules\Settings\SettingsModule;
 use MySchool\Modules\School\SchoolModule;
 use MySchool\Modules\AcademicYears\AcademicYearsModule;
+use MySchool\Modules\Shifts\ShiftsModule;
 if (!defined('ABSPATH')) { exit; }
 final class Plugin {
  private static ?self $instance=null;
@@ -23,6 +24,7 @@ final class Plugin {
   $this->registry->add(new SettingsModule());
   $this->registry->add(new SchoolModule());
   $this->registry->add(new AcademicYearsModule());
+  $this->registry->add(new ShiftsModule());
   $this->registry->boot();do_action('myschool/booted',$this);
  }
  public function modules():ModuleRegistry{return $this->registry;}
