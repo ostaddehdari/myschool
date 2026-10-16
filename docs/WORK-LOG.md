@@ -5,3 +5,4 @@
 - S00/W00.03: roles and capabilities, non-destructive upgrades and permission tests.
 - S00/W00.04: responsive admin dashboard, secure REST endpoints, Gregorian-Jalali date conversion.
 - S00/W00.05: Settings API, settings admin page, audit table migration v2, sanitization, safe error reporting.
+- S01/W01.01: school profile editor, media logo, validated form and migration v3.
