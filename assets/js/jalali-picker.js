@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.myschool-jalali-date').forEach(i=>{i.setAttribute('dir','ltr');i.setAttribute('inputmode','numeric');i.placeholder='1405/07/01';});});
