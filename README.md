@@ -1,11 +1,5 @@
 # MySchool — مدرسه من
-Version 0.1.3, cumulative WordPress plugin.
-Requirements: WordPress 6.4+, PHP 8.0+.
 
-W00.01: bootstrap and module loading.
-W00.02: installer and nine core database tables.
-W00.03: five school roles with granular permissions.
-W00.04: RTL responsive admin dashboard, REST API namespace myschool/v1, Gregorian/Jalali date conversion.
-REST routes: /wp-json/myschool/v1/status (myschool_manage_school) and /wp-json/myschool/v1/date/convert?date=2026-10-16 (myschool_access).
-Dates persist as Gregorian ISO dates; Jalali is for display.
-Existing data is retained during plugin upgrades.
+Version 0.1.4 (cumulative). W00.01 bootstrap; W00.02 core schema; W00.03 capabilities; W00.04 REST and Jalali; W00.05 settings and audit log. PHP >=8.0 and WordPress >=6.4.
+
+Admin menu: مدرسه من → تنظیمات. School settings are validated via Settings API. DB schema version 2 adds `wp_myschool_audit_logs`. Never commit personal data, credentials or API keys.

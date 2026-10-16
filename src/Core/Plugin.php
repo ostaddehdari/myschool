@@ -2,6 +2,7 @@
 namespace MySchool\Core;
 use MySchool\Modules\Admin\AdminModule;
 use MySchool\Modules\Api\ApiModule;
+use MySchool\Modules\Settings\SettingsModule;
 if (!defined('ABSPATH')) { exit; }
 final class Plugin {
  private static ?self $instance=null;
@@ -17,6 +18,7 @@ final class Plugin {
    load_plugin_textdomain('myschool',false,dirname(plugin_basename(MYSCHOOL_FILE)).'/languages');
    $this->registry->add(new AdminModule());
    $this->registry->add(new ApiModule());
+   $this->registry->add(new SettingsModule());
    $this->registry->boot();
    do_action('myschool/booted',$this);
  }
