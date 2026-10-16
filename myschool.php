@@ -2,7 +2,7 @@
 /**
  * Plugin Name: MySchool – مدرسه من
  * Description: Modular school management system foundation for WordPress.
- * Version: 0.1.4
+ * Version: 0.1.5
  * Requires at least: 6.4
  * Requires PHP: 8.0
  * Author: MySchool Team
@@ -10,7 +10,7 @@
  * Domain Path: /languages
  */
 if (!defined('ABSPATH')) { exit; }
-if (!defined('MYSCHOOL_VERSION')) { define('MYSCHOOL_VERSION', '0.1.4'); }
+if (!defined('MYSCHOOL_VERSION')) { define('MYSCHOOL_VERSION', '0.1.5'); }
 if (!defined('MYSCHOOL_FILE')) { define('MYSCHOOL_FILE', __FILE__); }
 if (!defined('MYSCHOOL_PATH')) { define('MYSCHOOL_PATH', plugin_dir_path(__FILE__)); }
 if (!defined('MYSCHOOL_URL')) { define('MYSCHOOL_URL', plugin_dir_url(__FILE__)); }
