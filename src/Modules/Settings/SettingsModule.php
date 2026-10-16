@@ -8,6 +8,7 @@ final class SettingsModule implements ModuleInterface {
  public function register():void {
   add_action('admin_menu',[$this,'menu']);
   add_action('admin_init',[$this,'settings']);
+  add_filter('option_page_capability_myschool_settings_group',static fn()=> 'myschool_manage_school');
   add_action('update_option_myschool_settings',[$this,'updated'],10,2);
  }
  public function defaults():array {return ['school_name'=>'','school_phone'=>'','school_email'=>'','timezone'=>'Asia/Tehran','sms_enabled'=>0];}
