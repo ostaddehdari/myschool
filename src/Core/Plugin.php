@@ -7,6 +7,7 @@ use MySchool\Modules\School\SchoolModule;
 use MySchool\Modules\AcademicYears\AcademicYearsModule;
 use MySchool\Modules\Shifts\ShiftsModule;
 use MySchool\Modules\AcademicStructure\AcademicStructureModule;
+use MySchool\Modules\Organization\OrganizationModule;
 if (!defined('ABSPATH')) exit;
 final class Plugin {
  private static ?self $instance=null;
@@ -19,7 +20,7 @@ final class Plugin {
   add_action('admin_init',[Installer::class,'maybeUpgrade']);
   add_action('admin_init',[Capabilities::class,'maybeUpgrade']);
   load_plugin_textdomain('myschool',false,dirname(plugin_basename(MYSCHOOL_FILE)).'/languages');
-  foreach([new AdminModule(),new ApiModule(),new SettingsModule(),new SchoolModule(),new AcademicYearsModule(),new ShiftsModule(),new AcademicStructureModule()] as $module)$this->registry->add($module);
+  foreach([new AdminModule(),new ApiModule(),new SettingsModule(),new SchoolModule(),new AcademicYearsModule(),new ShiftsModule(),new AcademicStructureModule(),new OrganizationModule()] as $module)$this->registry->add($module);
   $this->registry->boot();do_action('myschool/booted',$this);
  }
  public function modules():ModuleRegistry{return $this->registry;}
