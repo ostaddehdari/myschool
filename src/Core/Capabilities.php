@@ -14,6 +14,47 @@ final class Capabilities {
    'family'=>['myschool_view_own_children','myschool_view_own_attendance','myschool_view_own_grades','myschool_view_own_reportcards','myschool_view_own_homework','myschool_order_canteen','myschool_view_own_tickets']
   ];
  }
+ public static function groupLabels(): array {
+  return ['school'=>'مدیریت مدرسه','teaching'=>'آموزش و کلاس','reports'=>'کارنامه و گزارش‌ها',
+          'services'=>'خدمات و ارتباطات','family'=>'اطلاعات شخصی خانواده'];
+ }
+ /** Human-readable labels are separate from capability keys, which stay stable in WordPress. */
+ public static function labels(): array {
+  return [
+   'myschool_access'=>'ورود به سامانه مدرسه',
+   'myschool_manage_school'=>'مدیریت کامل مدرسه',
+   'myschool_manage_academic_years'=>'مدیریت سال‌های تحصیلی',
+   'myschool_manage_classes'=>'مدیریت کلاس‌ها',
+   'myschool_manage_staff'=>'مدیریت کارکنان و معلمان',
+   'myschool_manage_students'=>'مدیریت دانش‌آموزان',
+   'myschool_manage_guardians'=>'مدیریت اولیا',
+   'myschool_manage_enrollments'=>'مدیریت ثبت‌نام‌ها',
+   'myschool_view_assigned_classes'=>'مشاهده کلاس‌های واگذارشده',
+   'myschool_take_attendance'=>'ثبت حضور و غیاب',
+   'myschool_view_attendance'=>'مشاهده حضور و غیاب',
+   'myschool_manage_grades'=>'ثبت و ویرایش نمرات',
+   'myschool_view_grades'=>'مشاهده نمرات',
+   'myschool_manage_homework'=>'تعریف و ویرایش تکالیف',
+   'myschool_view_homework'=>'مشاهده تکالیف',
+   'myschool_publish_reportcards'=>'انتشار کارنامه‌ها',
+   'myschool_view_reportcards'=>'مشاهده کارنامه‌ها',
+   'myschool_view_reports'=>'مشاهده گزارش‌های مدیریتی',
+   'myschool_manage_canteen'=>'مدیریت بوفه',
+   'myschool_view_canteen'=>'مشاهده بوفه',
+   'myschool_manage_tickets'=>'مدیریت درخواست‌های پشتیبانی',
+   'myschool_create_ticket'=>'ثبت درخواست پشتیبانی',
+   'myschool_send_messages'=>'ارسال پیام‌ها',
+   'myschool_manage_sms'=>'مدیریت تنظیمات پیامک',
+   'myschool_manage_integrations'=>'مدیریت اتصال به سرویس‌ها',
+   'myschool_view_own_children'=>'مشاهده فرزندان خود',
+   'myschool_view_own_attendance'=>'مشاهده حضور و غیاب فرزندان خود',
+   'myschool_view_own_grades'=>'مشاهده نمرات فرزندان خود',
+   'myschool_view_own_reportcards'=>'مشاهده کارنامه فرزندان خود',
+   'myschool_view_own_homework'=>'مشاهده تکالیف فرزندان خود',
+   'myschool_order_canteen'=>'سفارش بوفه برای فرزندان خود',
+   'myschool_view_own_tickets'=>'مشاهده درخواست‌های خود'
+  ];
+ }
  public static function all(): array { return array_values(array_unique(array_merge(...array_values(self::groups())))); }
  public static function roles(): array {
   $g=self::groups();
