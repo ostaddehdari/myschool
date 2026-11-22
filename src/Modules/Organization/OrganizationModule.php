@@ -232,7 +232,6 @@ final class OrganizationModule implements ModuleInterface {
                 <?php foreach ($positions as $id => $position) : ?>
                     <details style="padding:12px;border-bottom:1px solid #ddd">
                         <summary><strong><?php echo esc_html($position['title']); ?></strong>
-                            <small>(<?php echo esc_html(self::roleSlug($id)); ?>)</small>
                             — <?php echo esc_html(count((array) ($position['caps'] ?? []))); ?> دسترسی
                         </summary>
                         <?php self::form($id, $position, $allowed); ?>
